@@ -1,0 +1,33 @@
+delimiter //
+create function login(uname VARCHAR(15),pwd VARCHAR(20))
+returns int
+DETERMINISTIC
+
+BEGIN
+	DECLARE stat INT;
+	
+	SELECT EXISTS(SELECT * FROM user WHERE user_name=uname and password=pwd) INTO stat;
+	return stat;
+		
+END //
+
+delimiter ;
+set @stat= login('ddff','assf');
+select @stat;
+
+
+delimiter //
+create function getUserType(uname VARCHAR(15))
+returns VARCHAR(15)
+DETERMINISTIC
+
+BEGIN
+	DECLARE utype VARCHAR(15);
+	SELECT type INTO utype FROM user WHERE user_name=uname;
+	return utype;
+		
+END //
+delimiter ;
+set @stat= getUserType('dwef');
+select @stat;
+

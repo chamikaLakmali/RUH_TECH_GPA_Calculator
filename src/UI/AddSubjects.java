@@ -41,14 +41,14 @@ public class AddSubjects extends javax.swing.JFrame {
         crseName = new javax.swing.JTextField();
         crsCode = new javax.swing.JTextField();
         dpt = new javax.swing.JComboBox();
-        acYear = new javax.swing.JTextField();
-        semester = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         noCredits = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox();
+        acYear = new javax.swing.JComboBox();
+        semester = new javax.swing.JComboBox();
         close = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
@@ -102,10 +102,6 @@ public class AddSubjects extends javax.swing.JFrame {
         dpt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         dpt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ICT", "BST", "ET" }));
 
-        acYear.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-
-        semester.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel8.setText("No of Credits     :");
 
@@ -122,6 +118,12 @@ public class AddSubjects extends javax.swing.JFrame {
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Credit Subject", "Non credit Subject" }));
+
+        acYear.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        acYear.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Level 1", "Level 2", "Level 3", "Level 4" }));
+
+        semester.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        semester.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Semester 1", "Semester 2" }));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -153,11 +155,11 @@ public class AddSubjects extends javax.swing.JFrame {
                                 .addGroup(jPanel3Layout.createSequentialGroup()
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(acYear, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(acYear, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(jPanel3Layout.createSequentialGroup()
                                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(semester, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(semester, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(jPanel3Layout.createSequentialGroup()
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
@@ -317,7 +319,7 @@ public class AddSubjects extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField acYear;
+    private javax.swing.JComboBox acYear;
     private javax.swing.JLabel back;
     private javax.swing.JLabel background;
     private javax.swing.JLabel close;
@@ -340,6 +342,6 @@ public class AddSubjects extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel logout;
     private javax.swing.JTextField noCredits;
-    private javax.swing.JTextField semester;
+    private javax.swing.JComboBox semester;
     // End of variables declaration//GEN-END:variables
 }

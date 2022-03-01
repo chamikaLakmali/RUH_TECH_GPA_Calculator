@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/CalMenuNotLogged.java</file>
-            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/Main.java</file>
-            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/MainMenuLogged.java</file>
+            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/userFunctions/UserFunctions.java</file>
             <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/Login.java</file>
-            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/Register.java</file>
-            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/AddSubjects.java</file>
-            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/UI/Welcome.java</file>
+            <file>file:/E:/academics/projects/RUH_TECH_GPA_Calculator/src/DB/DbConnection.java</file>
         </group>
     </open-files>
 </project-private>

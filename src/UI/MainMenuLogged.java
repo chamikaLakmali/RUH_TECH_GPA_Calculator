@@ -166,14 +166,10 @@ public class MainMenuLogged extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
-    private javax.swing.JLabel close;
-    private javax.swing.JLabel close1;
     private javax.swing.JLabel close2;
     private javax.swing.JLabel heading;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton login;
     private javax.swing.JButton register;

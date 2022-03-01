@@ -1,0 +1,42 @@
+
+
+DELIMITER //
+CREATE TRIGGER insertInToStudent
+AFTER INSERT ON students
+FOR EACH ROW
+BEGIN 
+INSERT INTO `user` (`user_name`, `password`, `type`) VALUES (new.uname,new.password, 'student');
+end //
+DELIMITER ;
+
+DELIMITER //
+CREATE TRIGGER deleteFromStudent
+AFTER DELETE ON students
+FOR EACH ROW
+BEGIN 
+DELETE FROM user where user_name=old.uname;
+end //
+DELIMITER ;
+
+
+
+DELIMITER //
+CREATE TRIGGER insertInToAdmin
+AFTER INSERT ON admin
+FOR EACH ROW
+BEGIN 
+INSERT INTO `user` (`user_name`, `password`, `type`) VALUES (new.admin_id,new.password, 'admin');
+end //
+DELIMITER ;
+
+
+DELIMITER //
+CREATE TRIGGER deleteFromAdmin
+AFTER DELETE ON admin
+FOR EACH ROW
+BEGIN 
+DELETE FROM user where user_name=old.admin_id;
+end //
+DELIMITER ;
+
+
