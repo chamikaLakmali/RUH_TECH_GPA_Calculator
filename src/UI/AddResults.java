@@ -1,27 +1,26 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package UI;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import userFunctions.UserFunctions;
 
-/**
- *
- * @author User01
- */
+
 public class AddResults extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AddResults
-     */
+    UserFunctions userFunctions=new UserFunctions();
     public AddResults() {
         
         initComponents();
-        fill();
+        fillTitle();
+        fillForm(0);
+        
         
         
     }
@@ -39,7 +38,7 @@ public class AddResults extends javax.swing.JFrame {
         close = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         bPanel = new javax.swing.JPanel();
-        title = new javax.swing.JLabel();
+        filter = new javax.swing.JComboBox();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,14 +82,18 @@ public class AddResults extends javax.swing.JFrame {
 
         bPanel.setBackground(new java.awt.Color(255, 255, 255));
         bPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        title.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        title.setText("Level 01 Semester 01 Results");
-        bPanel.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 230, 30));
-
         jScrollPane1.setViewportView(bPanel);
 
-        panel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 760, 380));
+        panel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 760, 360));
+
+        filter.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
+        filter.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Level 1 Semester 1", "Level 1 Semester 2", "Level 2 Semester 1", "Level 2 Semester 2", "Level 3 Semester 1", "Level 3 Semester 2", "Level 4 Semester 1", "Level 4 Semester 2" }));
+        filter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                filterActionPerformed(evt);
+            }
+        });
+        panel.add(filter, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 70, 250, -1));
 
         jPanel1.add(panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 780, 480));
 
@@ -132,34 +135,23 @@ public class AddResults extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_logoutMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AddResults.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AddResults.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AddResults.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AddResults.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void filterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_filterActionPerformed
+        bPanel.removeAll();
+        String t=filter.getSelectedItem().toString()+ " Results";
+        
+        fillTitle();
+        
+        bPanel.setVisible(false);
+        bPanel.setVisible(true);
+        int filterStat=filter.getSelectedIndex();
+        fillForm(filterStat);
+        
+        
+    }//GEN-LAST:event_filterActionPerformed
 
-        /* Create and display the form */
+    
+    public static void main(String args[]) {
+       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AddResults().setVisible(true);
@@ -172,52 +164,119 @@ public class AddResults extends javax.swing.JFrame {
     private javax.swing.JLabel back;
     private javax.swing.JLabel background;
     private javax.swing.JLabel close;
+    private javax.swing.JComboBox filter;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel logout;
     private javax.swing.JPanel panel;
-    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 
-    public void fill(){
+    public void fillTitle(){
 
+        
         int height=50;
       
-        for (int x=0;x<20;x++){
-            JPanel addPanal = new JPanel();
-            JLabel jLabel3 = new JLabel();
-            JLabel jLabel4 = new JLabel();
-            JComboBox jComboBox1 = new JComboBox();
-            
-            addPanal.setBackground(new java.awt.Color(153, 153, 153));
-            addPanal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        JLabel title = new JLabel();
+        JPanel addPanal = new JPanel();
+        JLabel jLabel3 = new JLabel();
+        JLabel jLabel4 = new JLabel();
+        JLabel jLabel5 = new JLabel();
+        JLabel jLabel6 = new JLabel();
 
-            jLabel3.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-            jLabel3.setText("jLabel3");
-            addPanal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 338, 40));
 
-            jLabel4.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-            jLabel4.setText("jLabel4");
-            addPanal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(358, 0, 200, 40));
+        addPanal.setBackground(new java.awt.Color(51,51,0));
+        addPanal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-            jComboBox1.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-            jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E", "E*" }));
-            addPanal.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(589, 5, 141, 30));
-            bPanel.add(addPanal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, height, 740, 40));
-            
-            height=height+50;
-        }
+        title.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         
+        title.setText(filter.getSelectedItem().toString() + " Results");
+        bPanel.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 230, 30));
 
-        
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Course Code");
+        addPanal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 40));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Course Name");
+        addPanal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 0, 320, 40));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Result");
+        addPanal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 5, 100, 30));
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Attempt");
+        addPanal.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 5, 100, 30));
+
+
+        bPanel.add(addPanal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, height, 740, 40));
+       
     }
     
-    public void testFull(){
-        int x=10;
-        if (x==10){
-            title.setText("Level 2 second semester");
-        }
+    
+    
+    public void fillForm(int filterStat) {
+ 
+        try {
+            ResultSet rs=userFunctions.fillResultForm(filterStat);
+            
+            int height=100;
+            
+            JButton add = new JButton();
+            if (rs.next()==false){
+                bPanel.removeAll();
+                fillTitle();
+                bPanel.setVisible(false);
+                bPanel.setVisible(true);
+                
+            }
+            else{
+                while(rs.next()){
+                    
+                    JPanel addPanal = new JPanel();
+                    JLabel jLabel3 = new JLabel();
+                    JLabel jLabel4 = new JLabel();
+                    JComboBox jComboBox1 = new JComboBox();
+                    JComboBox jComboBox2 = new JComboBox();
+
+
+                    addPanal.setBackground(new java.awt.Color(153, 153, 153));
+                    addPanal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+                    jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+                    jLabel3.setText(rs.getString(1));
+                    addPanal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 40));
+
+                    jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+                    jLabel4.setText(rs.getString(2));
+                    addPanal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 0, 320, 40));
+
+                    jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+                    jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "E", "E*" }));
+                    addPanal.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(475, 5,100, 30));
+
+                    jComboBox2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "First","Repeat"}));
+                    addPanal.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 5, 100, 30));
+                    bPanel.add(addPanal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, height, 740, 40));
+
+                    height=height+50;
+                }
+
+                add.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+                add.setText("Add");
+                bPanel.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, height, 120, 40));
+                
+            }
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(AddResults.class.getName()).log(Level.SEVERE, null, ex);
+        }   
     }
 
 }

@@ -4,6 +4,7 @@ package userFunctions;
 import DB.DbConnection;
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
@@ -51,6 +52,47 @@ public class UserFunctions {
         
         
         return utype;
+    }
+    
+    public ResultSet fillResultForm(int level){
+        ResultSet rs=null;
+        int lvl=0,sem=0;
+        if (level==0 || level==1){
+            lvl=1;
+        } else if (level==2 || level==3){
+            lvl=2;
+        }else if (level==4 || level==5){
+            lvl=3;
+        }else{
+            lvl=4;
+        }
+        
+        if (level%2==0){
+            sem=1;
+        }else{
+            sem=2;
+        }
+        rs=getSubjects(lvl,sem);
+        return rs;
+    
+    }
+    
+    public ResultSet getSubjects(int level,int sem){
+        ResultSet rs=null;
+        try {
+            CallableStatement cst=con.prepareCall("{call retrieveCourses(?,?)}");
+            cst.setInt(1, sem);
+            cst.setInt(2, level);
+            
+            rs=cst.executeQuery();
+            
+            
+            
+        }catch (Exception e) {
+            System.out.println(e);
+        }
+        
+        return rs;
     }
     
 }
