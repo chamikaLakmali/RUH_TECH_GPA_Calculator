@@ -121,70 +121,70 @@ public class ICT22 extends javax.swing.JFrame {
         bPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Internet Application Development               :");
-        bPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 290, 20));
+        jLabel3.setText("Internet Application Development");
+        bPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 330, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Operating System Concepts and Applications:");
-        bPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 290, 20));
+        jLabel4.setText("Operating System Concepts and Applications");
+        bPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 330, 20));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Computer Networks                                     :");
-        bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 290, 20));
+        jLabel5.setText("Computer Networks");
+        bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 330, 20));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Software Engineering                                   :");
-        bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 290, 20));
+        jLabel6.setText("Software Engineering");
+        bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 330, 20));
 
         sub4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         sub4.setText("Ecommerce Implementation, Management and Security ");
-        bPanel.add(sub4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 280, 40));
+        bPanel.add(sub4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 370, 40));
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 240, 300, -1));
+        bPanel.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, 300, -1));
 
         jComboBox2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, 300, -1));
+        bPanel.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 80, 300, -1));
 
         jComboBox3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 300, -1));
+        bPanel.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 300, -1));
 
         jComboBox4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 300, -1));
+        bPanel.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 300, -1));
 
         jComboBox5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 200, 300, -1));
+        bPanel.add(jComboBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, 300, -1));
 
         jComboBox6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 300, -1));
+        bPanel.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 280, 300, -1));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Business Economics                                     :");
-        bPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 290, 20));
+        jLabel8.setText("Business Economics");
+        bPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 330, 20));
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Level 02 Semester 1 - Department of ICT");
+        jLabel2.setText("Level 02 Semester 2 - Department of ICT");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 350, 40));
 
         bPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 50));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText("Soft Skills                                                    :");
-        bPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 290, 20));
+        jLabel9.setText("Soft Skills");
+        bPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 330, 20));
 
         jComboBox7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jComboBox7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Grade", "A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "E", "E*", "F" }));
-        bPanel.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 300, -1));
+        bPanel.add(jComboBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 300, -1));
 
         save.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         save.setText("ADD");

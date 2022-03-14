@@ -128,23 +128,23 @@ public class ICT11 extends javax.swing.JFrame {
         bPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 50));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Foundation of Mathematics                           :");
+        jLabel3.setText("Foundation of Mathematics");
         bPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 290, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Essentials of ICT                                         :");
+        jLabel4.setText("Essentials of ICT");
         bPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 290, 20));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("PC Applications and Computer Laboratory   : ");
+        jLabel5.setText("PC Applications and Computer Laboratory ");
         bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 290, 20));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Fundamentals of Computer Programming    :");
+        jLabel6.setText("Fundamentals of Computer Programming");
         bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 290, 20));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setText("Web Technologies                                         :");
+        jLabel7.setText("Web Technologies");
         bPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 280, 20));
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -172,7 +172,7 @@ public class ICT11 extends javax.swing.JFrame {
         bPanel.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 300, -1));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("English I                                                       :");
+        jLabel8.setText("English I");
         bPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 290, 20));
 
         save.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N

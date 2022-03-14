@@ -126,23 +126,23 @@ public class ICT41 extends javax.swing.JFrame {
         bPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 50));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Industrial Sociology                                      :");
+        jLabel3.setText("Industrial Sociology");
         bPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 290, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Cloud Computing                                         :");
+        jLabel4.setText("Cloud Computing");
         bPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 290, 20));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Artificial Intelligence                                   :");
+        jLabel5.setText("Artificial Intelligence");
         bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 290, 20));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Creativity, Innovation & Entrepreneurship  :");
+        jLabel6.setText("Creativity, Innovation & Entrepreneurship");
         bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 290, 20));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setText("Communication for Technologists                 :");
+        jLabel7.setText("Communication for Technologists");
         bPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 290, 20));
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N

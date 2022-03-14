@@ -122,23 +122,23 @@ public class ICT12 extends javax.swing.JFrame {
         bPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Computer Architecture                                :");
+        jLabel3.setText("Computer Architecture");
         bPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 290, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Database Management System                     :");
+        jLabel4.setText("Database Management System");
         bPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 290, 20));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("System Analysis and Design & Usability       :");
+        jLabel5.setText("System Analysis and Design & Usability");
         bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 290, 20));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Computer Laboratory                                   :");
+        jLabel6.setText("Computer Laboratory");
         bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 290, 20));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setText("Management Information System                :");
+        jLabel7.setText("Management Information System");
         bPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 280, 20));
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -166,7 +166,7 @@ public class ICT12 extends javax.swing.JFrame {
         bPanel.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 300, -1));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Discrete Mathematics                                  :");
+        jLabel8.setText("Discrete Mathematics");
         bPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 290, 20));
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
@@ -180,7 +180,7 @@ public class ICT12 extends javax.swing.JFrame {
         bPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 50));
 
         jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel9.setText("English II                                                    :");
+        jLabel9.setText("English II");
         bPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 290, 20));
 
         jComboBox7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -192,7 +192,7 @@ public class ICT12 extends javax.swing.JFrame {
         bPanel.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 100, -1));
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel10.setText("Fundamentals of Management                    :");
+        jLabel10.setText("Fundamentals of Management");
         bPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 290, 20));
 
         jComboBox8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N

@@ -114,17 +114,17 @@ public class ICT42 extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Level 04 Semester 1 - Department of ICT");
+        jLabel2.setText("Level 04 Semester 2 - Department of ICT");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 0, 350, 40));
 
         bPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 50));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Artificial Intelligence                                   :");
+        jLabel5.setText("Research project");
         bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 290, 20));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Creativity, Innovation & Entrepreneurship  :");
+        jLabel6.setText("Industrial Training (6-month period)");
         bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 290, 20));
 
         jComboBox3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N

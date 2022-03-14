@@ -128,23 +128,23 @@ public class ICT32 extends javax.swing.JFrame {
         bPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 740, 50));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Distributed Cloud Computing                       :");
+        jLabel3.setText("Distributed Cloud Computing");
         bPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 290, 20));
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel4.setText("Advanced Database Management Systems    :");
+        jLabel4.setText("Advanced Database Management Systems");
         bPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 290, 20));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel5.setText("Data Mining and Business Intelligence         :");
+        jLabel5.setText("Data Mining and Business Intelligence");
         bPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 120, 290, 20));
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel6.setText("Mobile Application Development                   :");
+        jLabel6.setText("Mobile Application Development");
         bPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 290, 20));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel7.setText("Network, Computer and Application Security:");
+        jLabel7.setText("Network, Computer and Application Security");
         bPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 290, 20));
 
         jComboBox1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -172,7 +172,7 @@ public class ICT32 extends javax.swing.JFrame {
         bPanel.add(jComboBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 280, 300, -1));
 
         jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel8.setText("Software Verification and Quality Assurance:");
+        jLabel8.setText("Software Verification and Quality Assurance");
         bPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 290, 20));
 
         save.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
