@@ -47,3 +47,19 @@ BEGIN
 END //
 
 ========================================================================================================================
+delimiter //
+create function getStuDepartment(uname VARCHAR(15))
+returns VARCHAR(5)
+DETERMINISTIC
+
+BEGIN
+	DECLARE dpt VARCHAR(5);
+	SELECT department INTO dpt FROM students WHERE uname=uname;
+	return dpt;
+		
+END //
+delimiter ;
+set @stat= getStuDepartment('stu01');
+select @stat;
+
+========================================================================================================================

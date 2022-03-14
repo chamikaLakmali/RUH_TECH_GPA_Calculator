@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package UI;
 
-/**
- *
- * @author User01
- */
+
 public class StudentMainMenuLogged extends javax.swing.JFrame {
 
     String userName;
@@ -125,7 +118,10 @@ public class StudentMainMenuLogged extends javax.swing.JFrame {
     }//GEN-LAST:event_close2MouseClicked
 
     private void addResultsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addResultsMouseClicked
-        // TODO add your handling code here:
+//        AddResults add=new AddResults(userName);
+//        add.setVisible(true);
+//        this.dispose();
+        
     }//GEN-LAST:event_addResultsMouseClicked
 
     private void viewGPAMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_viewGPAMouseClicked
@@ -142,9 +138,7 @@ public class StudentMainMenuLogged extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_logoutMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

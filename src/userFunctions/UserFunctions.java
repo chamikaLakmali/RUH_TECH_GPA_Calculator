@@ -6,10 +6,13 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import static java.sql.Types.VARCHAR;
+import java.util.HashMap;
+
 
 
 public class UserFunctions {
-    
+    String dpt;
     DbConnection dbConnection=new DbConnection();
     Connection con=dbConnection.getDbConnection();
     
@@ -54,24 +57,12 @@ public class UserFunctions {
         return utype;
     }
     
-    public ResultSet fillResultForm(int level){
+    public ResultSet fillResultForm(int level,String dpt){
+        this.dpt=dpt;
         ResultSet rs=null;
-        int lvl=0,sem=0;
-        if (level==0 || level==1){
-            lvl=1;
-        } else if (level==2 || level==3){
-            lvl=2;
-        }else if (level==4 || level==5){
-            lvl=3;
-        }else{
-            lvl=4;
-        }
-        
-        if (level%2==0){
-            sem=1;
-        }else{
-            sem=2;
-        }
+        int lvl=getYear(level);
+        int sem=getSemester(level);
+ 
         rs=getSubjects(lvl,sem);
         return rs;
     
@@ -80,11 +71,14 @@ public class UserFunctions {
     public ResultSet getSubjects(int level,int sem){
         ResultSet rs=null;
         try {
-            CallableStatement cst=con.prepareCall("{call retrieveCourses(?,?)}");
+            
+            CallableStatement cst=con.prepareCall("{call retrieveCourses(?,?,?)}");
             cst.setInt(1, sem);
             cst.setInt(2, level);
+            cst.setString(3, dpt);
             
             rs=cst.executeQuery();
+            
             
             
             
@@ -94,5 +88,54 @@ public class UserFunctions {
         
         return rs;
     }
+   
     
+    public String getUserDepartment(String uname){
+        String dpt="";
+        try {
+            
+            
+            CallableStatement cst=con.prepareCall("{?=call getStuDepartment(?)}");
+            cst.registerOutParameter(1, VARCHAR);
+            cst.setString(2, uname);
+            cst.execute();
+            dpt=cst.getString(1);
+            
+            
+        } catch (SQLException ex) {
+            System.out.println(ex);
+        }
+        return dpt;
+    }
+    
+    public int getSemester(int s){
+        int sem=0;
+        if (s%2==0){
+            sem=1;
+        }else{
+            sem=2;
+        }
+        return sem;
+    }
+    
+    public int getYear(int s){
+        int acYear=0;
+        if (s==0 || s==1){
+            acYear=1;
+        } else if (s==2 || s==3){
+            acYear=2;
+        }else if (s==4 || s==5){
+            acYear=3;
+        }else{
+            acYear=4;
+        }
+        return acYear;
+    }
+    
+    public void saveResults(String uname,HashMap<String,String> results){
+        for (String i : results.keySet()) {
+            System.out.println("key: " + i + " value: " + results.get(i));
+        }
+        
+    }
 }

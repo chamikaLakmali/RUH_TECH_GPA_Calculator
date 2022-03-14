@@ -93,6 +93,11 @@ public class Register extends javax.swing.JFrame {
         name.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
         regNo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        regNo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                regNoActionPerformed(evt);
+            }
+        });
 
         dpt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         dpt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ICT", "BST", "ET" }));
@@ -225,6 +230,10 @@ public class Register extends javax.swing.JFrame {
         welcome.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backMouseClicked
+
+    private void regNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regNoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_regNoActionPerformed
 
     /**
      * @param args the command line arguments

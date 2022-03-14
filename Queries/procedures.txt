@@ -1,10 +1,24 @@
 delimiter //
-create procedure retrieveCourses(IN sem INT, IN acYear INT)
+create procedure retrieveCourses(IN sem INT, IN acYear INT,IN dpt VARCHAR(5))
 
 begin
-	select *from courses WHERE academic_year=acYear AND semester=sem;
+	select *from courses WHERE academic_year=acYear AND semester=sem AND department=(dpt OR "COMMON");
 
 end//
 
 delimiter ;
-call retrieveCourses(1,1);
+call retrieveCourses(1,1,'ict');
+
+=========================================================================================================================
+delimiter //
+create procedure retrieveCoursesTest(IN sem INT, IN acYear INT)
+
+begin
+	select *from courses WHERE academic_year=acYear AND semester=sem ;
+
+end//
+
+delimiter ;
+call retrieveCoursesTest(1,1);
+
+select *from courses WHERE academic_year=1 AND semester=1 AND department=("ICT" OR "COMMON");
